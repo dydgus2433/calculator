@@ -1,10 +1,9 @@
 .btn {
-    width: 48px;
+    width: 148px;
     height: 48px;
     background-color: #2699FB;
     color: white;
     border-radius: 4px;
-    outline: none;
     border:none;
     display: flex;
     align-items: center;
@@ -25,20 +24,30 @@
 .row{
     display: flex;
     flex-direction: row;
-    gap: 4px;
-    margin-bottom: 4px;
+    gap: 16px;
+    align-items: flex-end;
 }
 
 .inp{
+    box-sizing: border-box;
     width : 204px;
     height: 48px;
-    box-sizing: border-box;
-    outline: none;
-    color:  #bce0fd;
-    padding : 0;    
-}
-.inp:disabled{
+    padding : 0 20px;    
+    color:  #48AEFF;
     background-color: white;
-    border : solid 1px #bce0fd;
+    border : solid 1px #94D0FF;
     font-size: 14px;
+}
+.inp::placeholder{
+    color:  #94D0FF;
+}
+.form-inp{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-inp label{
+    font-size: 12px;
+    color: #48AEFF;
 }
