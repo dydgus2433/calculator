@@ -3,28 +3,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initail-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 
+    <script src="main.js"></script>
 </head>
 <body>
-    <form onsubmit="onSubmit(event)">
+    <form onsubmit="onSubmit(event)" onreset="onReset">
         <div class="row">
             <div class="form-inp">
                 <label for="w">
                     몸무게(kg)
                 </label>
-                <input class="inp" placeholder="kg 단위" type="number" name="w">
+                <input class="inp" placeholder="kg 단위" type="number" name="w" min="0">
             </div><div class="form-inp">
                 <label for="h">
                     신장(m)
                 </label>
-                <input class="inp"  placeholder="m 단위"  type="number" name="h">
+                <input class="inp"  placeholder="m 단위" step="0.01" type="number" name="h" min="0">
             </div>
             <button class="btn" type="submit" >결과</button>
         </div>
+        <div id="res">
+            <div>
+                <meter style="width:100%;" id="meter" min="10" max="40" low="18.5" high="25" optimum="22"></meter>
+             </div>
+             <div class="res-text">
+                 <div>당신의 BMI는 <span id="bmi"></span> 입니다.</div>
+                 <div><span id="state"></span>입니다.</div>
+             </div>
+             <div style="text-align: center;">
+                     <button type="reset" class="btn">초기화</button>
+             </div>
+        </div>
     </form>
         
-    <script src="main.js"></script>
 </body>
 </html>
